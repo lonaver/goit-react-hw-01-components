@@ -8,8 +8,8 @@ import { TransactionData } from 'components/TransactionData/TransactionData';
 export const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.transactionHistory}>
-      <thead>
-        <tr>
+      <thead className={styles.td_head}>
+        <tr className={styles.tr_head}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
