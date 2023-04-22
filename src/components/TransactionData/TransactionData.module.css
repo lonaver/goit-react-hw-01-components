@@ -1,15 +1,13 @@
-td {
+.td_item {
   text-align: center;
   height: 60px;
   border-left: 1px solid var(--color-text);
 }
-td:last-child {
+.td_item:last-child {
   border-right: 1px solid var(--color-text);
 }
-/* tr {
-  border-bottom: 1px solid rgb(69, 66, 66);
-} */
-tr:nth-child(even) {
+
+.tr_item:nth-child(even) {
   background-color: var(--color-td-second);
   color: var(--color-text-second);
 }
