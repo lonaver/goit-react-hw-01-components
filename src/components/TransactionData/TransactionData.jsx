@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from './TransactionData.module.css';
 
 export const TransactionData = ({ type, amount, currency }) => {
   return (
