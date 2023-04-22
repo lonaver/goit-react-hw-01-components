@@ -1,0 +1,39 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: aliceblue;
+}
+
+.thumb {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tag,
+.location {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}
+
+.name {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  font-weight: 900;
+  font-size: 36px;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}

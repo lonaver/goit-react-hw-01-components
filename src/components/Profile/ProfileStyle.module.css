@@ -1,0 +1,9 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: var(--bcg-color-profile);
+  width: 400px;
+}

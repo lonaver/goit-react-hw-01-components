@@ -1,0 +1,27 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bcg-color-profile);
+  width: 420px;
+  padding: 0px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+.statList {
+  display: flex;
+  justify-content: center;
+
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
