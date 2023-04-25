@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import styles from './Stats.module.css';
 
@@ -23,5 +23,5 @@ export const Stats = ({ data }) => {
 };
 
 Stats.propTypes = {
-  data: propTypes.objectOf(propTypes.string),
+  data: PropTypes.objectOf(PropTypes.number),
 };

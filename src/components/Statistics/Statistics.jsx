@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './Statistic.module.css';
 
 const getRandomHexColor = () => {
@@ -28,12 +28,12 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: propTypes.string,
-  stats: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string,
-      label: propTypes.string,
-      percentage: propTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
     })
   ),
 };
