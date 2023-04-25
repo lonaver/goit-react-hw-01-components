@@ -1,43 +1,29 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+import { Stats } from 'components/Stats/Stats';
 import styles from './ProfileStyle.module.css';
 
-import { ProfileDescription } from 'components/ProfileDescription/ProfileDescription';
-import { Stats } from 'components/Stats/Stats';
-import { Statistics } from 'components/Statistics/Statistics';
-import { Friends } from 'components/Friends/Friends';
-import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
-
-const title = 'Upload stats';
-export const Profile = ({ user, data, friends, transactions }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <>
-      <div className={styles.profile}>
-        <ProfileDescription
-          avatar={user.avatar}
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-        ></ProfileDescription>
-        <Stats stats={user.stats}></Stats>
+    <div className={styles.profile}>
+      <div className={styles.description}>
+        <div className={styles.thumb}>
+          <img src={avatar} alt="User avatar" className="avatar" />
+        </div>
+        <p className={styles.name}>{username}</p>
+        <p className={styles.tag}>{tag}</p>
+        <p className={styles.location}>{location}</p>
       </div>
-      <Statistics title={title} stats={data}></Statistics>
-      <Friends friends={friends}></Friends>
-      <TransactionHistory items={transactions}></TransactionHistory>
-    </>
+      <Stats data={stats}></Stats>
+    </div>
   );
 };
 
 Profile.propTypes = {
-  user: propTypes.shape({
-    avatar: propTypes.string.isRequired,
-    username: propTypes.string.isRequired,
-    tag: propTypes.string.isRequired,
-    location: propTypes.string.isRequired,
-    stats: propTypes.object.isRequired,
-  }),
-  data: propTypes.array.isRequired,
-  friends: propTypes.array.isRequired,
-  transactions: propTypes.array.isRequired,
+  username: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatar: propTypes.string.isRequired,
+  stats: propTypes.objectOf(propTypes.string),
 };

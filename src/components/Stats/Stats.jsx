@@ -3,21 +3,25 @@ import propTypes from 'prop-types';
 
 import styles from './Stats.module.css';
 
-import { ElementStats } from 'components/ElementStats/ElementStats';
-
-export const Stats = ({ stats }) => {
+export const Stats = ({ data }) => {
   return (
     <ul className={styles.stats}>
-      <ElementStats
-        label="followers"
-        quantity={stats['followers']}
-      ></ElementStats>
-      <ElementStats label="views" quantity={stats['views']}></ElementStats>
-      <ElementStats label="likes" quantity={stats['likes']}></ElementStats>
+      <li className={styles.thumb}>
+        <span className={styles.label}>followers</span>
+        <span className={styles.quantity}>{data['followers']}</span>
+      </li>
+      <li className={styles.thumb}>
+        <span className={styles.label}>views</span>
+        <span className={styles.quantity}>{data['views']}</span>
+      </li>
+      <li className={styles.thumb}>
+        <span className={styles.label}>likes</span>
+        <span className={styles.quantity}>{data['likes']}</span>
+      </li>
     </ul>
   );
 };
 
 Stats.propTypes = {
-  stats: propTypes.object.isRequired,
+  data: propTypes.objectOf(propTypes.string),
 };
